@@ -160,13 +160,13 @@ func main() {
 
 	defer file.Close()
 
-	icon, err := png.Decode(file)
+	ícone, err := png.Decode(file)
 	if err != nil {
 		log.Fatalf("Erro ao decodificar o ícone: %v", err)
 	}
 
 	// ícone da janela
-	ebiten.SetWindowIcon([]image.Image{icon})
+	ebiten.SetWindowIcon([]image.Image{ícone})
 
 	// configurações da janela
 	ebiten.SetWindowSize(640, 480)
