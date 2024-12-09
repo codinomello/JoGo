@@ -153,14 +153,14 @@ func (g *Jogo) Layout(outsideWidth, outsideHeight int) (screenWidth, screenHeigh
 
 func main() {
 	// atribuição do ícone
-	file, err := os.Open("img/plamt.png")
+	arquivo, err := os.Open("icons/go.png")
 	if err != nil {
 		log.Fatalf("Erro ao abrir o ícone: %v", err)
 	}
 
-	defer file.Close()
+	defer arquivo.Close()
 
-	ícone, err := png.Decode(file)
+	ícone, err := png.Decode(arquivo)
 	if err != nil {
 		log.Fatalf("Erro ao decodificar o ícone: %v", err)
 	}
